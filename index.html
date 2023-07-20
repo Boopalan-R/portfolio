@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+    <title>Boopalan Portfolio</title>
+    <style>
+        body{
+            background:rgb(29, 29, 29);
+        }
+        .navigation{
+            background: rgb(29, 29, 29);
+        }
+        .navbar-brand{
+            color: white;
+            font-weight: 600;
+        }
+        .nav-link{
+            color: white;
+            font-weight: 600;
+            margin-left: 40px;
+        }
+        .nav-link:hover{
+            color:rgb(5, 236, 5) ;
+        }
+        .btn1{
+            color: white;
+        }
+        .btn1:hover{
+            background: rgb(5, 236, 5);
+            color: black;
+        }
+        .banner{
+            width: 100%;
+            height: 400px;
+            padding: 40px;
+        }
+        
+        .banner-text{
+            margin-top: 50px;
+            color: rgb(217, 217, 217);
+            margin-left: 100px;
+        }
+        .hire-me{
+            width: 150px;
+            padding: 10px;
+            color: white;
+            border: solid 2px rgb(5, 236, 5);
+            background: transparent;
+        }
+        .hire-me:hover{
+            background: rgb(5, 236, 5);
+            color: black;
+        }
+        .about-me{
+            width: 100%;
+            height: 300px;
+            background: black;
+            padding: 10px;
+        }
+        .skills{
+            text-align: center;
+            color: white;
+        }
+        .skills h1{
+            font-size: 27px;
+        }
+        .boxes{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 35px;
+            padding: 50px;
+        }
+        .box{
+            width: 80px;
+            height: 80px;
+            border-radius: 100px;
+        }
+        .box img{
+            width: 100%;
+            height: 100%;
+            border-radius: 100px;
+        }
+        .popup-text{
+            width: 400px;
+            height: 200px;
+            background: black;
+            padding: 20px;
+            position: absolute;
+            margin-left: 800px;
+            margin-top: -300px;
+            border-radius: 10px;
+        }
+        .popup-text img{
+            float: right;
+        }
+        .popup-text h5{
+            margin-top: 30px;
+            color: white;
+        }
+        .popup-text h6{
+            margin-top: 10px;
+            color: white;
+        }
+        .popup-text button{
+            margin-top: 10px;
+            background: rgb(5, 236, 5);
+            color: black;
+            padding: 10px;
+            font-weight: 600;
+            border: none;
+        }
+        .lap-animation{
+            width: 100%;
+            height: 570px;
+            background:rgb(29, 29, 29);
+            padding: 10px;
+        }
+        .lap{
+            width: 500px;
+            height: 250px;
+            background: black;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            padding: 10px;
+           margin: auto;
+        }
+        .lap img{
+            width: 100%;
+            height: 100%;
+        }
+        .lap-bottom{
+            width: 500px;
+            height: 15px;
+            background: white;
+            margin-left: -10px;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+        .lap-bottom-center{
+            width: 200px;
+            height: 8px;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            margin: auto;
+            background: gray;
+
+        }
+        .service-information{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            padding: 50px;
+        }
+        .service-information1{
+            width: 400px;
+            height: 100px;
+            border: solid 2px rgb(5, 236, 5);
+            padding: 10px;
+            background: black;
+            border-radius: 10px;
+            color: white;
+        }
+        .service-information1 p{
+            font-size: 13px;
+        }
+        .project{
+            width: 100%;
+            height: 650px;
+            background: black;
+            padding: 10px;
+        }
+        .project-image{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 20px;
+            margin-left: 50px;
+        }
+        .project-box{
+            width: 300px;
+            height: 200px;
+            background: gainsboro;
+            border-radius: 10px;
+        }
+        .project-box img{
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+        }
+        .contact{
+            padding: 20px;
+            color: white;
+        }
+        .form-control{
+            background: rgb(13, 13, 13);
+            color: white;
+            border: solid 2px  rgb(5, 236, 5);
+        }
+        .btn2{
+            border: solid 2px  rgb(5, 236, 5);
+            color: white;
+            background: transparent;
+            border-radius: 0px;
+        }
+        .btn2:hover{
+            background: rgb(5, 236, 5);
+            border: solid 2px rgb(5, 236, 5);
+            color: black;
+        }
+        @media only screen and (max-width: 768px) {
+            .banner{
+            width: 100%;
+            height: 400px;
+            padding: 20px;
+        }
+        
+        .banner-text{
+            margin-top: 10px;
+            color: rgb(217, 217, 217);
+            margin-left: 20px;
+        }
+            .about-me{
+                height: 550px;
+            }
+            .skills h1{
+                font-size: 15px;
+            }
+            .skills p{
+                font-size: 10px;
+            }
+            .boxes{
+                margin: auto;
+                gap: 30px;
+                margin-top: -20px;
+                
+            }
+            .box{
+                width: 70px;
+                height: 70px;
+            }
+            .lap-animation{
+            width: 100%;
+            height: 820px;
+            background:rgb(29, 29, 29);
+            padding: 10px;
+        }
+        .popup{
+            padding: 10px;
+        }
+        .popup-text{
+            width: 80%;
+            height: 200px;
+            background: black;
+            padding: 20px;
+            margin-left: 0px;
+            position: absolute;
+            margin-top: -300px;
+            border-radius: 10px;
+        }
+        .popup-text img{
+            float: right;
+        }
+        .popup-text h5{
+            margin-top: 20px;
+            color: white;
+        }
+        .popup-text h6{
+            margin-top: 10px;
+            color: white;
+        }
+        .popup-text button{
+            background: rgb(5, 236, 5);
+            color: black;
+            padding: 10px;
+            font-weight: 600;
+            border: none;
+        }
+        .lap{
+            width: 100%;
+            height: 250px;
+            background: black;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            padding: 10px;
+            margin: auto;
+        }
+        .lap img{
+            width: 100%;
+            height: 100%;
+        }
+        .lap-bottom{
+            width: 106%;
+            height: 15px;
+            background: white;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+        .lap-bottom-center{
+            width: 200px;
+            height: 8px;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            margin: auto;
+            background: gray;
+
+        }
+        .service-information{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            padding:20px;
+        }
+        .service-information1{
+            width: 100%;
+            height: 100px;
+            border: solid 2px rgb(5, 236, 5);
+            padding: 10px;
+            background: black;
+            border-radius: 10px;
+            color: white;
+        }
+        .service-information1 p{
+            font-size: 13px;
+        }
+        .project{
+            width: 100%;
+            height: 100%;
+            background: black;
+            padding: 10px;
+        }
+        .project-image{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 10px;
+            margin-left: 0px;
+            margin-top: 10px;
+        }
+        .project-box{
+            width: 100%;
+            height: 200px;
+            background: gainsboro;
+            border-radius: 10px;
+        }
+        .project-box img{
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+        }
+        }
+        @media only screen and (max-width: 400px) {
+            .box{
+                width: 60px;
+                height: 60px;
+            }
+        }
+    </style>
+</head>
+<body>
+<!-- navbar starts -->
+<nav class="navbar navbar-expand-lg  navigation">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Portfolio</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link " aria-current="page" href="#home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#skills">Skills</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Boopalan-Resume.pdf">Download My Resume</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="#contact">Contact</a>
+          </li>
+        </ul>
+       <a href="https://github.com/dashboard"><button class="btn  btn1"  >Github <img src="data:image/png;base64,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" alt="" width="25" style="border-radius: 500px;"></button></a>
+      <a href="https://www.linkedin.com/feed/"><button class="btn  btn1"  >Linkedin <img src="https://www.citypng.com/public/uploads/preview/linkedin-square-white-icon-transparent-png-11640440452zi2ykndpw2.png" alt="" width="22" ></button></a>
+      </div>
+    </div>
+  </nav>
+<!-- navbar ends -->
+<!-- banner starts -->
+<div class="banner" id="home">
+    <div class="banner-text">
+        <h1>Hello,</h1>
+        <h1>I am<span style="color: rgb(5, 236, 5);" > Boopalan,</span></h1>
+        <h1>Front End Developer</h1>
+        <p>Currently located in salem.I love building interactive,and best user experience on the web</p>
+        <button class="hire-me">Hire Me</button>
+    </div>
+</div>
+<!-- banner ends -->
+<!-- popup -->
+
+<div class="popup">
+    <div class="popup-text">
+    <img src="https://static.vecteezy.com/system/resources/previews/018/887/462/original/signs-close-icon-png.png" alt="" width="20">
+    <h5>HI, Everyone</h5>
+    <h6>Thank you for Spending time to see my portfolio</h6>
+    <a href="Boopalan-Resume.pdf"><button>Download Resume</button></a>
+    </div>
+</div>
+
+<!-- popup ends -->
+<!-- about mee section -->
+<div class="about-me" id="skills">
+    <div class="skills">
+        <h1><span style="color: rgb(5, 236, 5);">Skills</span> and Tools</h1>
+        <p>I have well knowledge in below mentioned skills and tools</p>
+    </div>
+    <div class='boxes'>
+        <div class='box'>
+          <img src="https://w7.pngwing.com/pngs/201/90/png-transparent-logo-html-html5.png" alt="" >
+        </div>
+        <div class='box'>
+          <img src="https://cdn.pixabay.com/photo/2017/08/05/11/16/logo-2582747_1280.png" alt="" >
+        </div>
+        <div class='box'>
+          <img src="https://icon-library.com/images/jquery-icon-png/jquery-icon-png-2.jpg" alt="" >
+        </div>
+        <div class='box'>
+          <img src="https://cdn-icons-png.flaticon.com/512/5968/5968292.png" alt="" >
+        </div>
+        <div class='box'>
+          <img src="https://e7.pngegg.com/pngimages/838/327/png-clipart-website-development-programming-language-computer-programming-logo-php-program-logo-blue-text-thumbnail.png" alt="" >
+        </div>
+        <div class='box'>
+          <img src="https://download.logo.wine/logo/MySQL/MySQL-Logo.wine.png" alt="" style="background: white;" />
+        </div>
+        <div class='box'>
+          <img src="https://hossaini.gallerycdn.vsassets.io/extensions/hossaini/bootstrap-intellisense/1.1.1/1686659585299/Microsoft.VisualStudio.Services.Icons.Default" alt="" />
+        </div>
+        <div class='box'>
+          <img src="https://banner2.cleanpng.com/20180720/kha/kisspng-react-javascript-library-redux-user-interface-tesseract-5b52265cc83931.4218499515321104288201.jpg" alt="" />
+        </div>
+        <div class='box'>
+          <img src="https://img.freepik.com/free-icon/snakes_318-368381.jpg" alt="" />
+        </div>
+        <div class='box'>
+          <img src="https://cdn-images-1.medium.com/max/1200/1*DG5eBssbHsAyh_RtTRz8mQ@2x.png" alt="" />
+        </div>
+        <div class='box'>
+          <img src="data:image/jpeg;base64,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" alt="" />
+        </div>
+        <div class='box'>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Adobe_Photoshop_CC_icon.svg/640px-Adobe_Photoshop_CC_icon.svg.png" alt="" />
+        </div>
+      </div>
+</div>
+<!-- about me section ends -->
+<!-- lap animation -->
+<div class="lap-animation">
+    <div class="skills">
+        <h1><span style="color: rgb(5, 236, 5);"> Service</span></h1>
+    </div>
+    <div class="lap">
+        <img src="https://content.invisioncic.com/p313717/monthly_2022_10/NvL.gif.199c2218772803e864cdcec8a53cf89e.gif" alt="">
+        <div class="lap-bottom">
+            <div class="lap-bottom-center"></div>
+        </div>
+    </div>
+    <div class="service-information">
+        <div class="service-information1">
+            <h6>Web development</h6>
+            <p>I like to create a website with my beautiful code I usually code a responsive website or web application</p>
+        </div>
+        <div class="service-information1">
+            <h6>Responsive-Design</h6>
+            <p>I like to design a responsive website and mobile application with user friendly access</p>
+        </div>
+        <div class="service-information1">
+            <h6>Mobile App Development</h6>
+            <p>I like to design a mobile application with best user experience and responsive manner</p>
+        </div>
+    </div>
+</div>
+<!-- lap animation ends -->
+<!-- project section -->
+<div class="project">
+    <div class="skills">
+        <h1><span style="color: rgb(5, 236, 5);">Top</span> Projects</h1>
+        <p>I complete every project with good interface and good user experience</p>
+        <a href="https://github.com/"><button class="hire-me">See all Projects</button></a>
+    </div>
+    <div class="project-image">
+        <div class="project-box">
+            <img src="ksr.png" alt="">
+        </div>
+        <div class="project-box">
+            <img src="Dashboard (2).png" alt="">
+        </div>
+        <div class="project-box">
+            <img src="fuel.png" alt="">
+        </div>
+        <div class="project-box">
+            <img src="eclean.png" alt="">
+        </div>
+        <div class="project-box">
+            <img src="torch.png" alt="">
+        </div>
+        <div class="project-box">
+            <img src="animation.png" alt="">
+        </div>
+    </div>
+</div>
+<!-- project section ends -->
+<!-- contact  -->
+<div class="contact" id="contact">
+    <div class="skills">
+        <h1><span style="color: rgb(5, 236, 5);">Contact</span></h1>
+        <p>Use this section to contact me</p>
+    </div>
+    <form class="row g-3 needs-validation" action="mailto:boopalanr2403@gmail.com" method="post" enctype="text/plain">
+        <div class="col-md-4 position-relative">
+          <label for="validationTooltip01" class="form-label">First name</label>
+          <input type="text" class="form-control" name="Firstname" id="validationTooltip01" required >
+         
+        </div>
+        <div class="col-md-4 position-relative">
+          <label for="validationTooltip02" class="form-label">Last name</label>
+          <input type="text" class="form-control"  name="Lastname" id="validationTooltip02"  required >
+       
+        </div>
+        <div class="col-md-4 position-relative">
+          <label for="validationTooltipUsername" class="form-label">Email</label>
+          <div class="input-group has-validation     in">
+            <input type="Email" class="form-control"   name="Email" id="validationTooltipUsername" aria-describedby="validationTooltipUsernamePrepend" required>
+          </div>
+        </div>
+        <div class="col-md-6 position-relative">
+          <label for="validationTooltip03" class="form-label">Textarea</label>
+          <textarea class="form-control" id="validationTextarea"  name="Text"  required></textarea>
+          
+        </div>
+        <div class="col-12">
+          <button class="btn  btn2" type="submit" value="send">Submit form</button>
+        </div>
+      </form>
+</div>
+<!-- contact section ends -->
+<script>
+    $(function(){
+        $(".popup").hide();
+        $(".popup").fadeIn(1000);
+        $(".popup-text img").click(function(){
+            $(".popup").hide();
+        })
+    })
+</script>
+</body>
+</html>
